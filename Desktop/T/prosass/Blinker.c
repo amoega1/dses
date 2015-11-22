@@ -3,19 +3,19 @@
 
 int main (int argc, char *argv[]) {
 
-	wiringPiSetup();
+    wiringPiSetup();
 
-	for (int i=0;i<8;++i){
-		pinMode (i, OUTPUT);
-	}
+    for (int i=0;i<8;++i){
+	pinMode (i, OUTPUT);
+    }
 	
-	for (;;){
-		for (int i=0;i<8;++i){
-			digitalWrite (i, HIGH);
-			delay(1000);
-			digitalWrite (i, LOW);
-			delay(100);
-		}
+    for (;;){
+	for (int i=0;i<8;++i){
+            digitalWrite (i, HIGH);
+	    delay(1000);
+	    digitalWrite (i, LOW);
+	    delay(100);
 	}
-	return 0;
+    }
+    return 0;
 }
